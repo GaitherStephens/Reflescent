@@ -1,0 +1,300 @@
+@media screen and (min-device-width : 350px) and (max-device-width : 400px){
+  body{
+    -webkit-transform:scale(0.906);
+    -webkit-transform-origin: top left;
+  }
+}
+
+@media screen and (min-device-width : 300px) and (max-device-width : 349px){
+  body{
+    -webkit-transform:scale(0.77299);
+    -webkit-transform-origin: top left;
+  }
+}
+@font-face {
+  font-family:"geosans";
+  src: url(../fonts/geosans.ttf);
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "geosans";
+}
+
+.visible {
+  display:block!important;
+}
+
+.hidden {
+  display: none!important;
+}
+
+#mainElement {
+  position: absolute;
+  margin: 0px;
+  padding-left: 0px;
+}
+
+#mCon {
+  position: absolute;
+  background-position: center;
+  background-size: auto 400px;
+  background-color: black;
+  overflow: hidden;
+  top: 20px;
+  left: 10px;
+  width: 394px;
+  height: 310px;
+  border-radius: 20px;
+  background-clip: padding-box;
+  border-bottom-color: transparent;
+  box-shadow: 2px 5px 5px #000;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+#newsCon {
+  position: absolute;
+  top: 0px;
+  margin: 10px;
+  padding: 0px;
+}
+
+#agendaCon {
+  width: 400px;
+  height: 300px;
+}
+
+#weatherCon {
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+#wxIcon_large {
+  position: absolute;
+  top: 5px;
+  left:0px
+}
+
+#wxTemp {
+  position: absolute;
+  top: 95px;
+  left: 20px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 50px;
+  text-shadow: 0px 0px 10px #000000,
+               0px 0px 20px #000000;
+}
+#wxCity {
+  position: absolute;
+  top: 40px;
+  left: 105px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 24px;
+  text-shadow: 0px 0px 10px #000000,
+               0px 0px 20px #000000;
+}
+#wxCondition {
+  position: absolute;
+  top: 76px;
+  left: 105px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  text-shadow: 0px 0px 10px #000000,
+               0px 0px 20px #000000;
+}
+
+#wxWindDirection {
+  position: absolute;
+  top: 110px;
+  left: 105px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  text-shadow: 0px 0px 10px #000000,
+               0px 0px 20px #000000;
+}
+#wxWindSpeed {
+  position: absolute;
+  top: 140px;
+  left: 105px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  text-shadow: 0px 0px 10px #000000,
+               0px 0px 20px #000000;
+}
+
+#daySection{
+  position:absolute;
+  left: 5px;
+  top: 190px;
+  height:35px;
+  z-index: 5;
+}
+
+#daySection p {
+  margin:-2px;
+  font-size:16px
+}
+
+#daySection img {
+  width:55px;
+}
+
+#daySection div {
+  position: relative;
+  top:10px;
+  left:0px;
+  float:left;
+  width:75px;
+  text-shadow: 0px 0px 5px #000000,
+               0px 0px 10px #000000;
+}
+
+#eventsContainer {
+  width: 100%;
+  height: 360px;
+  width: 300px;
+  position: absolute;
+  left: 30px;
+  top:15px;
+}
+
+.event {
+  margin: 0px;
+  height: 55px;
+  padding: 0px;
+}
+
+p {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0px;
+  margin: 0px;
+}
+
+.colour {
+  height: 40px;
+  width: 3px;
+  position: relative;
+  left: 5px;
+  top: 0px;
+  background-color: #00FF00;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+}
+
+.title {
+  height: 20px;
+  width: 280px;
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+  position: relative;
+  left: 20px;
+  top: 0px;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.time {
+  height: 20px;
+  width: 280px;
+  font-size: 14px;
+  font-weight: 100;
+  color: white;
+  position: relative;
+  left: 20px;
+  top: 0px;
+  padding: 0px;
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#musicBg {
+  background-position: center;
+  background-image: url('../images/album.jpg');
+  background-size: auto 400px;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: .4;
+}
+
+#artwork img{
+  position:absolute;
+  top:190px;
+  left:150px;
+  width:100px;
+  height:100px;
+  z-index: 0;
+  text-shadow: 0px 0px 30px #000000,
+               0px 0px 40px #000000;
+}
+
+#artist{
+    position:absolute;
+    padding: 0px;
+    margin: 0px;
+    top:45px;
+    width: 400px;
+    font-size:18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    color:#ffffff;
+    z-index: 0;
+    text-shadow: 0px 0px 15px #000000,
+                 0px 0px 20px #000000;
+}
+#title{
+  position:absolute;
+  padding: 0px;
+  margin: 0px;
+  top: 90px;
+  width: 400px;
+  font-size:24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  color:#ffffff;
+  z-index: 0;
+  text-shadow: 0px 0px 15px #000000,
+               0px 0px 20px #000000;
+}
+
+#album{
+  position:absolute;
+  padding: 0px;
+  margin: 0px;
+  top:142px;
+  width: 400px;
+  font-size:18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  color:#ffffff;
+  z-index: 0;
+  text-shadow: 0px 0px 15px #000000,
+               0px 0px 20px #000000;
+}

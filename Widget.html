@@ -1,0 +1,482 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/lang.js"></script>
+    <script src="js/swipes.js"></script>
+    <script src="js/main.js"></script>
+
+  </head>
+  <body>
+    <div id="statusBar"></div>
+    <div id="mainElement">
+
+      <div id="mCon">
+          <div id="weatherCon" class="hidden">
+          <div id="wxIcon_large"><img id="wxIcon_largeImg" src="images/wx/41.png" style="width:90px;"/></div>
+          <div id="wxTemp">118</div>
+          <div id="wxCity">Loading...</div>
+          <div id="wxCondition">Scattered Thunderstorms</div>
+          <div id="wxWindDirection">NNW</div>
+          <div id="wxWindSpeed">15</div>
+          <section id="daySection">
+
+            <!-- display next three days -->
+            <div id="dayZero" style="margin-top:0;">
+              <center>
+              <p id="dayZeroDayString">Sat</p>
+              <img id="dayZeroImg" src="images/wx/23.png"/>
+              <p style="width: 50px; text-align:center;"><span id="dayZeroHigh">34</span>&nbsp;&nbsp;<span id="dayZeroLow" style="color:#bfbfbf;">17</span></p>
+              </center>
+            </div>
+            <div id="dayOne" style="margin-top:0;">
+              <center>
+              <p id="dayOneDayString">Sun</p>
+              <img id="dayOneImg" src="images/wx/3.png"/>
+              <p style="width: 50px; text-align:center;"><span id="dayOneHigh">36</span>&nbsp;&nbsp;<span id="dayOneLow" style="color:#bfbfbf;">9</span></p>
+              </center>
+            </div>
+
+            <div id="dayTwo" style="margin-top:0;">
+              <center>
+              <p id="dayTwoDayString">Mon</p>
+              <img id="dayTwoImg" src="images/wx/34.png"/>
+              <p style="width: 50px; text-align:center;"><span id="dayTwoHigh">45</span>&nbsp;&nbsp;<span id="dayTwoLow" style="color:#bfbfbf;">34</span></p>
+              </center>
+            </div>
+
+            <div id="dayThree" style="margin-top:0;">
+              <center>
+              <p id="dayThreeDayString">Tue</p>
+              <img id="dayThreeImg" src="images/wx/34.png"/>
+              <p style="width: 50px; text-align:center;"><span id="dayThreeHigh">23</span>&nbsp;&nbsp;<span id="dayThreeLow" style="color:#bfbfbf;">23</span></p>
+              </center>
+            </div>
+
+            <div id="dayFour" style="margin-top:0;">
+              <center>
+              <p id="dayFourDayString">Wed</p>
+              <img id="dayFourImg" src="images/wx/34.png"/>
+              <p style="width: 50px; text-align:center;"><span id="dayFourHigh">44</span>&nbsp;&nbsp;<span id="dayFourLow" style="color:#bfbfbf;">31</span></p>
+              </center>
+            </div>
+          </section>
+        </div>
+        <div id="newsCon" class="hidden">
+          <!-- start sw-rss-feed code -->
+          <script type="text/javascript">
+          <!--
+          rssfeed_url = new Array();
+          rssfeed_url[0]="http://news.yahoo.com/rss/"; rssfeed_url[1]="http://feeds.gawker.com/gizmodo/full"; rssfeed_url[2]="http://feeds.gawker.com/lifehacker/full"; rssfeed_url[3]="https://www.engadget.com/tag/rss/";
+          rssfeed_frame_width="370";
+          rssfeed_frame_height="270";
+          rssfeed_scroll="on";
+          rssfeed_scroll_step="10";
+          rssfeed_scroll_bar="off";
+          rssfeed_target="_blank";
+          rssfeed_font_size="16";
+          rssfeed_font_face="";
+          rssfeed_border="off";
+          rssfeed_css_url="";
+          rssfeed_title="off";
+          rssfeed_title_name="";
+          rssfeed_title_bgcolor="#";
+          rssfeed_title_color="#fff";
+          rssfeed_title_bgimage="http://";
+          rssfeed_footer="off";
+          rssfeed_footer_name="rss feed";
+          rssfeed_footer_bgcolor="#";
+          rssfeed_footer_color="#fff";
+          rssfeed_footer_bgimage="http://";
+          rssfeed_item_title_length="180";
+          rssfeed_item_title_color="#fff";
+          rssfeed_item_bgcolor="#";
+          rssfeed_item_bgimage="http://";
+          rssfeed_item_border_bottom="off";
+          rssfeed_item_source_icon="off";
+          rssfeed_item_date="off";
+          rssfeed_item_description="on";
+          rssfeed_item_description_length="180";
+          rssfeed_item_description_color="#fff";
+          rssfeed_item_description_link_color="#fff";
+          rssfeed_item_description_tag="on";
+          rssfeed_no_items="0";
+          rssfeed_cache = "6996e44b9d0cceeb9e15c693aabfaf0a";
+          //-->
+          </script>
+          <script type="text/javascript" src="http://feed.surfing-waves.com/js/rss-feed.js"></script>
+          <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. -->
+          <div style="text-align:right; width:370px;"><a href="http://www.surfing-waves.com/feed.htm" target="_blank" style="color:#fff;font-size:10px">widget @</a> <a href="http://www.surfing-waves.com" target="_blank" style="color:#fff;font-size:10px">surfing-waves.com</a></div>
+          <!-- end sw-rss-feed code -->
+        </div>
+        <div id="agendaCon" class="visible">
+          <div id="eventscontainer">
+
+            <div style="padding:5px;"></div>
+
+            <div id="eventOne" class="event">
+              <p id="eventOneColour" class="colour"></p>
+              <p id="eventOneTitle" class="title">Doctor</p>
+              <p id="eventOneTime" class="time">12:00pm</p>
+            </div>
+
+            <div id="eventTwo" class="event">
+              <p id="eventTwoColour" class="colour"></p>
+              <p id="eventTwoTitle" class="title">Another Doctor</p>
+              <p id="eventTwoTime" class="time">23:00</p>
+            </div>
+
+            <div id="eventThree" class="event">
+              <p id="eventThreeColour" class="colour"></p>
+              <p id="eventThreeTitle" class="title"></p>
+              <p id="eventThreeTime" class="time"></p>
+            </div>
+
+            <div id="eventFour" class="event">
+              <p id="eventFourColour" class="colour"></p>
+              <p id="eventFourTitle" class="title"></p>
+              <p id="eventFourTime" class="time"></p>
+            </div>
+
+            <div id="eventFive" class="event">
+              <p id="eventFiveColour" class="colour"></p>
+              <p id="eventFiveTitle" class="title"></p>
+              <p id="eventFiveTime" class="time"></p>
+            </div>
+            <div id="noevents">
+ <center><p>No Events</p></center>
+</div>
+          </div>
+        </div>
+        <div id="musicCon" class="hidden">
+          <div id="musicBg"></div>
+          <div id="artist">Prince</div>
+          <div id="title">Purple Rain</div>
+          <div id="album">Greatest Hits</div>
+          <div id="artwork"><img id="art" src="images/album.jpg"></img></div>
+        </div>
+
+
+      </div>
+    </div>
+    <script type="text/cycript">
+      //<![CDATA[
+      var widgetIdentifier = "com.spqrguymontag.reflescent";
+      var twentyfourhour = twentyfourhourOp;
+      var wxRefresh = wxRefreshOp;
+      var ampm;
+
+
+      //initializes widget
+      window.onload = function() {
+
+        //registers widget with IS2
+        [IS2Weather registerForWeatherUpdatesWithIdentifier:widgetIdentifier andCallback:^ void () {
+          updateWx();
+        }];
+
+        [IS2Weather setWeatherUpdateTimeInterval:wxRefresh forRequester:widgetIdentifier];
+
+        //registers widget for media updates
+        [IS2Media registerForNowPlayingNotificationsWithIdentifier:widgetIdentifier andCallback:^ void () {
+          updateMedia();
+        }];
+
+        // Code to run after calendar data updates.
+        [IS2Calendar registerForCalendarNotificationsWithIdentifier:widgetIdentifier andCallback:^ void () {
+          // Update onscreen elements
+          updateCalendarData();
+        }];
+        updateCalendarData();
+      }
+
+      // Make sure to de-register ourselves when removed from the user's screen.
+      window.onunload = function() {
+        [IS2Weather unregisterForUpdatesWithIdentifier:widgetIdentifier];
+        [IS2Weather removeRequesterForWeatherTimeInterval:widgetIdentifier];
+        [IS2Media unregisterForNotificationsWithIdentifier:widgetIdentifier];
+        [IS2Calendar unregisterForNotificationsWithIdentifier:widgetIdentifier];
+        return null;
+      };
+
+      //updates weather
+      function updateWx(){
+        var dayArray = JSON.parse("" + [IS2Weather dayForecastsForCurrentLocationJSON]);
+
+        document.getElementById("mCon").style.backgroundImage = "url('images/wx/weather" + [IS2Weather currentCondition] + ".jpg')";
+        document.getElementById("wxIcon_largeImg").src = "images/wx/" + [IS2Weather currentCondition] + ".png";
+        document.getElementById("wxTemp").innerHTML = [IS2Weather currentTemperature] + "&deg";
+        document.getElementById("wxCity").innerHTML = [IS2Weather currentLocation];
+        document.getElementById("wxCondition").innerHTML = [IS2Weather currentConditionAsString];
+        document.getElementById("wxWindDirection").innerHTML = " Wind Direction: " + degToCard([IS2Weather currentWindDirection]);
+        document.getElementById("wxWindSpeed").innerHTML = " Wind Speed: " + [IS2Weather currentWindSpeed];
+
+        //populates forecast elements
+        document.getElementById('dayZeroDayString').innerHTML = translate[current].sday[dayArray[1].dayOfWeek - 1];
+        document.getElementById('dayZeroImg').src = "images/wx/" + dayArray[1].condition + ".png";
+        document.getElementById('dayZeroHigh').innerHTML = "" + dayArray[1].high + "&deg";
+        document.getElementById('dayZeroLow').innerHTML = "" + dayArray[1].low + "&deg";
+
+        document.getElementById('dayOneDayString').innerHTML = translate[current].sday[dayArray[2].dayOfWeek - 1];
+        document.getElementById('dayOneImg').src = "images/wx/" + dayArray[2].condition + ".png";
+        document.getElementById('dayOneHigh').innerHTML = "" + dayArray[2].high + "&deg";
+        document.getElementById('dayOneLow').innerHTML = "" + dayArray[2].low + "&deg";
+
+        document.getElementById('dayTwoDayString').innerHTML = translate[current].sday[dayArray[3].dayOfWeek - 1];
+        document.getElementById('dayTwoImg').src = "images/wx/" + dayArray[3].condition + ".png";
+        document.getElementById('dayTwoHigh').innerHTML = "" + dayArray[3].high + "&deg";
+        document.getElementById('dayTwoLow').innerHTML = "" + dayArray[3].low + "&deg";
+
+        document.getElementById('dayThreeDayString').innerHTML = translate[current].sday[dayArray[4].dayOfWeek - 1];
+        document.getElementById('dayThreeImg').src = "images/wx/" + dayArray[4].condition + ".png";
+        document.getElementById('dayThreeHigh').innerHTML = "" + dayArray[4].high + "&deg";
+        document.getElementById('dayThreeLow').innerHTML = "" + dayArray[4].low + "&deg";
+
+        document.getElementById('dayFourDayString').innerHTML = translate[current].sday[dayArray[5].dayOfWeek - 1];
+        document.getElementById('dayFourImg').src = "images/wx/" + dayArray[5].condition + ".png";
+        document.getElementById('dayFourHigh').innerHTML = "" + dayArray[5].high + "&deg";
+        document.getElementById('dayFourLow').innerHTML = "" + dayArray[5].low + "&deg";
+      }
+
+      function hideAllAvailableEvents() {
+        for (i = 0; i < 5; i++) {
+          document.getElementById(elementIdForNumber(i) + 'Title').innerHTML = "";
+          document.getElementById(elementIdForNumber(i) + 'Colour').style.backgroundColor = "transparent";
+          document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = "";
+        }
+      }
+
+      function elementIdForNumber(x) {
+        switch (x) {
+          case 0:
+            return "eventOne";
+          case 1:
+            return "eventTwo";
+          case 2:
+            return "eventThree";
+          case 3:
+            return "eventFour";
+          case 4:
+            return "eventFive";
+          default:
+            return "";
+        }
+      }
+
+      function timeValueCorrection(value) {
+         if (value < 10) {
+              return "0" + value;
+         } else {
+              return value;
+         }
+      }
+
+      function timeToDayName(time) {
+          var dayNumber = time.getDay();
+          var today = new Date();
+          var tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+
+          if (dayNumber == today.getDay()) {
+                return "Today";
+          } else if (dayNumber == tomorrow.getDay()) {
+                return "Tomorrow";
+          }
+
+          switch(dayNumber) {
+              case 0:
+                return "Sunday";
+              case 1:
+                return "Monday";
+              case 2:
+                return "Tuesday";
+              case 3:
+                return "Wednesday";
+              case 4:
+                return "Thursday";
+              case 5:
+                return "Friday";
+              case 6:
+                return "Saturday";
+              default:
+                return "";
+            }
+      }
+
+      function timerFiredEventDidEnd() {
+          updateCalendarData();
+
+          // The above will also handle resetting the timer for an event's end.
+      }
+
+      function updateCalendarData() {
+        // First, grab the data between right now and in 7 days' time.
+        var timeNow = new Date();
+        var timeInWeek = timeNow.getTime() + (7 * 24 * 60 * 60 * 1000);
+
+        var firstEndTime = 0;
+
+        var eventsArray = JSON.parse("" + [IS2Calendar calendarEntriesJSONBetweenStartTimeAsTimestamp:timeNow.getTime() andEndTimeAsTimestamp:timeInWeek]);
+
+        if (eventsArray.length > 0) {
+              document.getElementById('noevents').style.display = "none";
+              document.getElementById('eventscontainer').style.display = "inline";
+
+              // Initially, hide all the available events we can show.
+              hideAllAvailableEvents();
+
+              // Go over events available.
+              for (i = 0; i < eventsArray.length; i++) {
+                var event = eventsArray[i];
+
+                // Update title and location data
+                document.getElementById(elementIdForNumber(i) + 'Title').innerHTML = event.title;
+
+                // Also, update the colour to display.
+                document.getElementById(elementIdForNumber(i) + 'Colour').style.backgroundColor = event.associatedCalendarHexColor;
+
+                if (event.allDay == 0) {
+                    // Work out date display.
+                    var timeStart = new Date(event.startTimeTimestamp);
+                    var timeEnd = new Date(event.endTimeTimestamp);
+
+                    if (timeStart.getDay() == timeEnd.getDay()) {
+                        // Event is all on the same day, huzzah.
+                        var timeString = "" + timeToDayName(timeStart) + ": " + timeValueCorrection(timeStart.getHours()) + ":" + timeValueCorrection(timeStart.getMinutes());
+                        timeString += " to " + timeValueCorrection(timeEnd.getHours()) + ":" + timeValueCorrection(timeEnd.getMinutes());
+
+                        document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = timeString;
+                    } else {
+                          // Event goes over multiple days...
+                          var timeString = "" + timeToDayName(timeStart) + ", " + timeValueCorrection(timeStart.getHours()) + ":" + timeValueCorrection(timeStart.getMinutes());
+                          timeString += " to " + timeToDayName(timeEnd) + ", " + timeValueCorrection(timeEnd.getHours()) + ":" + timeValueCorrection(timeEnd.getMinutes());
+                          document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = timeString;
+                    }
+                } else {
+                    var timeStart = new Date(event.startTimeTimestamp);
+                    document.getElementById(elementIdForNumber(i) + 'Time').innerHTML = timeToDayName(timeStart) + ": all day";
+                }
+
+                // handle end times for timer.
+                if (firstEndTime == 0 || event.endTimeTimestamp < firstEndTime) {
+                  firstEndTime = event.endTimeTimestamp;
+                }
+
+                if (i == 4) {
+                  // Can't display more than 5 upcoming events!
+                  break;
+                }
+              }
+
+         } else {
+              // Just display that there's no events.
+               document.getElementById('noevents').style.display = "inline";
+               document.getElementById('eventscontainer').style.display = "none";
+         }
+
+          // Also, ensure we refresh when the first end time is reached of events.
+          // Setting timeout is in milliseconds, and both timeNow and firstEndTime are too.
+
+          if (firstEndTime == 0) {
+            // Setup a time for the next midnight instead.
+             timeNow.setDate(timeNow.getDate()+1);
+             firstEndTime = timeNow.getTime();
+          }
+
+          setTimeout(timerFiredEventDidEnd, firstEndTime - timeNow);
+      }
+
+      //updates media info
+      function updateMedia(){
+        document.getElementById("artist").innerHTML = [IS2Media currentTrackArtist];
+        document.getElementById("title").innerHTML = [IS2Media currentTrackTitle];
+        document.getElementById("album").innerHTML = [IS2Media currentTrackAlbum];
+        document.getElementById("art").src = [IS2Media currentTrackArtworkBase64];
+        document.getElementById("musicBg").style.backgroundImage = "url(" + [IS2Media currentTrackArtworkBase64] + ")";
+      }
+
+      //no iphone touch events while on widget
+      var disableMove = true;
+      if (disableMove) {
+        document.getElementById('mainElement').addEventListener('touchmove', function (e) {
+          if (e.target.id === 'mainElement') {
+              e.preventDefault();
+          }
+        });
+      }
+      if (disableMove) {
+        document.getElementById('newsCon').addEventListener('touchmove', function (e) {
+          if (e.target.id === 'newsCon') {
+              e.preventDefault();
+          }
+        });
+      }
+      if (disableMove) {
+        document.getElementById('agendaCon').addEventListener('touchmove', function (e) {
+          if (e.target.id === 'agendaCon') {
+              e.preventDefault();
+          }
+        });
+      }
+      if (disableMove) {
+        document.getElementById('musicCon').addEventListener('touchmove', function (e) {
+          if (e.target.id === 'musicCon') {
+              e.preventDefault();
+          }
+        });
+      }
+      if (disableMove) {
+        document.getElementById('weatherCon').addEventListener('touchmove', function (e) {
+          if (e.target.id === 'weatherCon') {
+              e.preventDefault();
+          }
+        });
+      }
+
+    //function that captures the event
+    var swipeMusic = {
+        itemSwipe: function(direction){
+            if(direction === 'u'){
+              document.getElementById("musicCon").className = "hidden";
+              document.getElementById("agendaCon").className = "visible";
+            }
+        }
+    };
+    var swipeAgenda = {
+        itemSwipe: function(direction){
+            if(direction === 'u'){
+              document.getElementById("agendaCon").className = "hidden";
+              document.getElementById("newsCon").className = "visible";
+            }
+        }
+    };
+
+    var swipeNews = {
+        itemSwipe: function(direction){
+            if(direction === 'u'){
+              document.getElementById("newsCon").className = "hidden";
+              document.getElementById("weatherCon").className = "visible";
+            }
+        }
+    };
+
+    var swipeWeather = {
+        itemSwipe: function(direction){
+            if(direction === 'u'){
+              document.getElementById("weatherCon").className = "hidden";
+              document.getElementById("musicCon").className = "visible";
+            }
+        }
+    };
+
+      //adds swipe detection to element
+      detectswipe('#musicCon', swipeMusic.itemSwipe);
+      detectswipe('#agendaCon', swipeAgenda.itemSwipe);
+      detectswipe('#newsCon', swipeNews.itemSwipe);
+      detectswipe('#weatherCon', swipeWeather.itemSwipe);
+      //]]>
+    </script>
+
+
+
+  </body>
+</html>
